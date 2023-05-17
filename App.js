@@ -1,7 +1,6 @@
-import RootNavigation from './src/navigation/RootNavigation';
+import RootNavigation from "./src";
+
 
 export default function App() {
-  return (
-    <RootNavigation />
-  );
+  return <RootNavigation />;
 }

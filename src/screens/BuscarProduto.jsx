@@ -4,6 +4,7 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 import { View } from "react-native";
 import { db } from "../config/firebase";
 import { FlatList } from "react-native-web";
+import { styles } from "../utils/styles";
 
 export default function BuscarProduto({ navigation }) {
   const [busca, setBusca] = useState("");
@@ -33,9 +34,10 @@ export default function BuscarProduto({ navigation }) {
   );
 
   return (
-    <View>
-      <Text>Home Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Busque seu produto aqui:</Text>
       <TextInput
+        style={styles.input}
         label="Nome do Produto"
         value={busca}
         onChangeText={setBusca}
